@@ -32,7 +32,8 @@ const { isLoggedIn } = storeToRefs(userStore)
         <a class="nav-link" @click="userStore.logOut">Logout</a>
       </div>
       <template v-else>
-        <a class="nav-link" @click="userStore.logIn">Login</a>
+        <!-- <a class="nav-link" @click="userStore.logIn">Login</a> -->
+        <RouterLink class="nav-link" to="/sign-in">Sign In</RouterLink>
       </template>
     </nav>
   </header>
