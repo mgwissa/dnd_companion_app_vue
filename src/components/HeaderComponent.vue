@@ -24,10 +24,11 @@ const { isLoggedIn } = storeToRefs(userStore)
           <a class="nav-link" href="/backstory_sandstone.pdf">Backstory</a>
         </div>
         <div>
-          <a class="nav-link" href="https://www.dndbeyond.com" target="_blank">Character Sheet</a>
+          <RouterLink class="nav-link" to="/character-sheet">Character Sheet</RouterLink>
         </div>
         <div>
-          <a class="nav-link" href="https://www.dndbeyond.com" target="_blank">Class</a>
+          <!-- <a class="nav-link" href="https://www.dndbeyond.com" target="_blank">Class</a> -->
+          <RouterLink class="nav-link" to="/class">Class</RouterLink>
         </div>
         <a class="nav-link" @click="userStore.logOut">Logout</a>
       </div>
@@ -40,13 +41,21 @@ const { isLoggedIn } = storeToRefs(userStore)
 </template>
 
 <style scoped>
-nav {
+header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 1rem;
   background-color: #333;
   color: #fff;
+  width: 100%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1220px;
 
   .nav-link {
     color: #fff;

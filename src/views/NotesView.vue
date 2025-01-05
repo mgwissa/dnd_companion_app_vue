@@ -40,8 +40,8 @@ const addNote = () => {
 </script>
 
 <template>
-  <div class="about">
-    <h1>This is the Notes page</h1>
+  <div class="notes-container">
+    <h1>Notes</h1>
     <label for="note">Add A Note:</label>
     <textarea class="note-input" id="note"></textarea>
     <button @click="addNote">Add Note</button>
@@ -65,7 +65,18 @@ const addNote = () => {
             </li>
           </ul>
         </li>
+        <li>
+          <p>King Gollip the 19th - King of Downfall</p>
+        </li>
       </ul>
     </div>
   </div>
 </template>
+
+<style scoped>
+.notes-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1220px;
+}
+</style>
